@@ -4,6 +4,8 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Build completed'
+        retry(count: 3)
+        sh 'wad'
       }
     }
 
